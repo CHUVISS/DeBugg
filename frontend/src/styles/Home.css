@@ -8,6 +8,7 @@
   padding: 16px;
 }
 
+/* Часть, где отображается поле ввода */
 .main {
   width: 100%;
   max-width: 1000px;
@@ -20,6 +21,11 @@
   align-items: center;
   border: 1px solid #374151;
 }
+
+.main.shifted {
+  margin-left: 320px;
+}
+/* конец */
 
 .subtitle {
   font-size: 1.25rem;
@@ -46,3 +52,37 @@
 .resume-input:focus {
   border: 2px solid #3b82f6;
 }
+
+.submit-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #1e40af;
+}
+
+
+/* бокова панель с выводом поправок */
+.result-panel {
+  position: fixed;
+  border-radius: 12px;
+  left: -300px;
+  top: 60px;
+  width: 300px;
+  height: calc(100% - 60px);
+  background: #e5e7eb;
+  transition: left 0.5s ease-in-out;
+}
+
+.result-panel.open {
+  left: 0;
+}
+/* конец */
